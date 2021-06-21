@@ -16,7 +16,7 @@
 <p align="left">
 <img src="./screens/home.png" width="30%" height="400" />
 &nbsp; &nbsp; &nbsp; &nbsp;
-<img src="./screens/generate.jpg" width="30%" height="400" />
+<img src="./screens/generate.png" width="30%" height="400" />
 &nbsp; &nbsp; &nbsp; &nbsp;
 <img src="./screens/copiedtext.png" width="30%" height="400" />
 </p>
