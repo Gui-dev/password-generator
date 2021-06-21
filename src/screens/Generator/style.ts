@@ -55,5 +55,13 @@ export const ResultGenerate = styled.View`
 
 export const ResultGenerateText = styled.Text`
   font-size: 20px;
+  text-align: center;
   color: #333;
+  width: 100%;
+`
+
+export const CopiedTextResult = styled.Text`
+  font-size: 16px;
+  text-align: center;
+  color: #FFF;
 `

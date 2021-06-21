@@ -1,15 +1,18 @@
 import React, { useState } from 'react'
 import Slider from '@react-native-community/slider'
+import Clipboard from 'expo-clipboard'
 
 import logo from './../../assets/logo.png'
 import { Container, Image, Characters, SliderContainer, ButtonGenerate, ButtonGenerateText,
-  ResultGenerate, ResultGenerateText
+  ResultGenerate, ResultGenerateText, CopiedTextResult
 } from './style'
 
 export const Generator: React.FC = () => {
   const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$*'
+
   const [slideValue, setSlideValue] = useState<number>(6)
-  const [password, setPassword] = useState<string>()
+  const [password, setPassword] = useState<string | null>()
+  const [copiedText, setCopiedText] = useState(false)
 
   const handleGeneratePassword = () => {
     let pass = ''
@@ -19,6 +22,15 @@ export const Generator: React.FC = () => {
     }
 
     setPassword(pass)
+  }
+
+  const handleCopyText = () => {
+    Clipboard.setString(String(password))
+    setCopiedText(true)
+
+    setTimeout(() => {
+      setCopiedText(false)
+    }, 3000)
   }
 
   return (
@@ -45,9 +57,18 @@ export const Generator: React.FC = () => {
 
       { password && (
         <ResultGenerate>
-          <ResultGenerateText>{ password }</ResultGenerateText>
+          <ResultGenerateText onLongPress={ handleCopyText }>
+            { password }
+          </ResultGenerateText>
         </ResultGenerate>
       ) }
+
+      { copiedText && (
+        <CopiedTextResult>
+          Copiado com sucesso
+        </CopiedTextResult>
+      ) }
+
     </Container>
   )
 }
