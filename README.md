@@ -11,21 +11,15 @@
 # Passowrd Generator
   - A password generator with react-native
 
-<!-- # Screens
+# Screens
 
 <p align="left">
-<img src="./screens/home.jpg" width="16%" height="300" />
+<img src="./screens/home.png" width="30%" height="400" />
 &nbsp; &nbsp; &nbsp; &nbsp;
-<img src="./screens/name_user.jpg" width="16%" height="300" />
+<img src="./screens/generate.jpg" width="30%" height="400" />
 &nbsp; &nbsp; &nbsp; &nbsp;
-<img src="./screens/confirmation.png" width="16%" height="300" />
-&nbsp; &nbsp; &nbsp; &nbsp;
-<img src="./screens/home_plant.png" width="16%" height="300" />
-&nbsp; &nbsp; &nbsp; &nbsp;
-<img src="./screens/plant_list.png" width="16%" height="300" />
-&nbsp; &nbsp; &nbsp; &nbsp;
-<img src="./screens/plant_delete.png" width="16%" height="300" />
-</p> -->
+<img src="./screens/copiedtext.png" width="30%" height="400" />
+</p>
 
 ## Technologies used
   - [React Native](https://reactnative.dev)
@@ -35,7 +29,8 @@
 
 ## Requirements
 
-You need to install both [Node.js](https://nodejs.org) and [Yarn](https://yarnpkg.com) or npm to run this project.
+You need to install [Node.js](https://nodejs.org), [Yarn](https://yarnpkg.com) or npm to run this project
+and [Expo](https://docs.expo.io/).
 
 ## How to use it
 
@@ -44,6 +39,8 @@ You need to install both [Node.js](https://nodejs.org) and [Yarn](https://yarnpk
   $ yarn install
   # Run app
   $ expo start
+  # or
+  $ yarn start
 ```
 
 The app will be available for access on your browser at (http://localhost:19002)
